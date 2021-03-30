@@ -1,0 +1,11 @@
+------------------------------------------------------------------------------------------------
+# install tlp
+sudo apt install tlp
+# install lsimbox batery 
+sudo add-apt-repository ppa:slimbook/slimbook
+sudo apt update
+sudo apt install slimbookbattery
+# remove slimbookbattery
+sudo add-apt-repository --remove ppa:slimbook/slimbook
+sudo apt remove --autoremove slimbookbattery
+-----------------------------------------------------------------------------------------------
