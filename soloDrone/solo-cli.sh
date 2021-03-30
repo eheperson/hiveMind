@@ -1,7 +1,7 @@
 ###########################################################################################################################
 ###########################################################################################################################
 #
-# Follow the procedures for Connecting Solo to WiFi, then proceed. >>> soloWifiConnection.sh
+# Follow the procedures for Connecting Solo to WiFi, then proceed. >>> 'accessingSolo.sh'
 #
 # First time solo CLI 
 # Ensure you are still connected to the solo network (you do not need to be SSH'd in). 

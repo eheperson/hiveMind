@@ -3,9 +3,8 @@
 #
 #       Step - 1 : accessingSolo.sh
 #       Step - 2 : preparingPC.sh
-#       Step - 3 : soloWifiConnection.sh
-#       Step - 4 : makingSoloMoreAccessible-optional.sh (that step is optional, you can just skip it )
-#       Step - 5 : dronekit-python.sh
+#       Step - 3 : makingSoloMoreAccessible-optional.sh (that step is optional, you can just skip it )
+#       Step - 4 : dronekit-python.sh
 #
 # If everythng is OK, then continue to :
 #
