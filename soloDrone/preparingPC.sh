@@ -7,8 +7,14 @@
 #
 #  !! The Solo CLI should be installed on the PC to execute solo commands  
 #
+#
+sudo pip uninstall solo-cli -y || true
 #   Connect to valid WiFi network with internet and run:
 sudo -H pip install git+https://github.com/3drobotics/solo-cli
+#or
+sh sudo -H pip install git+https://github.com/3drobotics/solo-cli 
+# or
+sudo pip install https://github.com/3drobotics/solo-cli/archive/master.zip --no-cache-dir
 #
 ###################################################################
 #---------------- Optional - Begin -------------------------------#
