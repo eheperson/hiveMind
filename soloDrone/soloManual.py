@@ -79,3 +79,33 @@ def command(client, cmd):
     chan.close()
     #
     return code, stdout, stderr
+#
+def commandBlind(client, cmd):
+    chan = client.get_transport().open_session()
+    chan.exec_command(cmd)
+#
+def isConnected():
+    """
+    await_network method.
+    To check if internet connection is alvailable.
+    """
+    socket.setdefaulttimeout(5)
+    while True:
+        try:
+            socket.gethostbyname('example.com')
+        except KeyboardInterrupt as e:
+            raise e
+        except Exception as e:
+            time.sleep(0.1)
+            continue
+
+        try:
+            request = urllib2.Request('http://example.com/')
+            urllib2.urlopen(request)
+        except KeyboardInterrupt as e:
+            raise e
+        except Exception as e:
+            time.sleep(0.1)
+            continue
+        else:
+            break
