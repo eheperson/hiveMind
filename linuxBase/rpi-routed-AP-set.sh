@@ -111,7 +111,7 @@ sudo nano /etc/dnsmasq.conf
 # You should be able to reach the Raspberry Pi under the name gw.wlan from wireless clients.
 #
 #############################################################################
-Ensure wireless operation
+# Ensure wireless operation
 #############################################################################
 # To ensure WiFi radio is not blocked on your Raspberry Pi, 
 # execute the following command:

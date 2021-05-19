@@ -38,8 +38,13 @@ sudo apt-get install libzbar0 -y
 sudo pip3 install virtualenv
 #
 #Creating virtual environments for Python3 and Python2
+# for python2 : 'which python'
+#   then fill the '--python=' argument according that output
+# for python3 : 'which python3'
+#   then fill the '--python=' argument according that output
 virtualenv --python=/usr/bin/python2.7 hivePy27
 virtualenv --python=/usr/bin/python3.7 hivePy37
+virtualenv --python=/usr/bin/python3.7 masterAPI
 #
 # Python DroneKit Module Installation
 source hivePy37/bin/activate
@@ -54,6 +59,13 @@ pip install dronekit
 pip install dronekit-sitl
 deactivate
 #
+source masterAPI/bin/activate
+pip install python-opencv
+pip install sockets
+pip install io
+pip install picamera
+deactivate
+#
 # Creating virtual env for solo-cli (for testing purposes)
 virtualenv --python=/usr/bin/python2.7 soloCli
 source soloCli/bin/activate
@@ -63,8 +75,6 @@ git clone https://github.com/3drobotics/solo-cli.git
 ####-----------------------------------------------------------------------------------
 ####-----------------------------------------------------------------------------------
 apt-get build-dep -y lxml
-
-
 
 
 

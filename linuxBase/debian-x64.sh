@@ -25,3 +25,5 @@ conda update conda
 #Creating conda environments for Python3 and Python2
 conda create --name hivePy37 python=3.7
 conda create --name hivePy27 python-2.7
+
+#conda is not supported Arm based OSes

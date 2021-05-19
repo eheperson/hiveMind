@@ -1,0 +1,6 @@
+
+
+Find list of connected devices on my Raspberry pi router :
+    > Method 1 : sudo arp
+    > Method 2 : iw dev wlan0 station dump (as root )
+    > Method 3 : Search 'ipfm'. It could be usefull for that purpose.
