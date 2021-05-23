@@ -48,7 +48,7 @@ clientController.load_system_host_keys()
 clientController.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 clientController.connect(controller, username='root', password='TjSDBkAu', timeout=5)
 #
-chanController = client.get_transport().open_session()
+chanController = clientController.get_transport().open_session()
 chanController.exec_command('cat /VERSION')
 #
 stderr = ''

@@ -102,20 +102,21 @@ sudo systemctl enable wpa_supplicant.service
 # This can be achieved by creating a systemd service unit for 'dhclient'.
 sudo nano /etc/systemd/system/dhclient.service
 #
-        # Put the following text into the file.
-        #     [Unit]
-        #     Description= DHCP Client
-        #     Before=network.target
-        #     After=wpa_supplicant.service
+#Put the following text into the file.
+#
+[Unit]
+Description= DHCP Client
+Before=network.target
+After=wpa_supplicant.service
 
-        #     [Service]
-        #     Type=forking
-        #     ExecStart=/sbin/dhclient wlan0 -v
-        #     ExecStop=/sbin/dhclient wlan0 -r
-        #     Restart=always
+[Service]
+Type=forking
+ExecStart=/sbin/dhclient wlan0 -v
+ExecStop=/sbin/dhclient wlan0 -r
+Restart=always
             
-        #     [Install]
-        #     WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
 #
 # Save and close the file. Then enable this service.
 sudo systemctl enable dhclient.service

@@ -1,13 +1,13 @@
 import sys
 import paramiko
 import time
+import base64
 import socket
 import os
 import tempfile
 import urlparse
 import urllib2
 
-import base64, soloutils
 from distutils.version import LooseVersion
 ##
 #   /home/pi/.local/lib/python2.7/site-packages/soloutils/
@@ -17,7 +17,7 @@ from distutils.version import LooseVersion
 ##
 
 controller = '10.1.1.1'
-solo = '10.1.1.1'
+solo = '10.1.1.10'
 
 # This script operates in two stages: creating the script file
 # and then executing it, so we are resilient to network dropouts.

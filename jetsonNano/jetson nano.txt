@@ -1,0 +1,73 @@
+#
+#
+#
+#
+#---------------------------------------------------------------------------
+#
+ssh <username>@192.168.55.1
+#
+#---------------------------------------------------------------------------
+#
+mkdir -p ~/nvdli-data
+#
+#---------------------------------------------------------------------------
+#
+echo "sudo docker run --runtime nvidia -it --rm --network host \
+    --volume ~/nvdli-data:/nvdli-nano/data \
+    --device /dev/video0 \
+    nvcr.io/nvidia/dli/dli-nano-ai:v2.0.1-r32.5.0" > docker_dli_run.sh
+#
+chmod +x docker_dli_run.sh
+#
+./docker_dli_run.sh
+#
+#---------------------------------------------------------------------------
+#
+If using the alternate CSI camera instead of the USB webcam, 
+add :  --volume /tmp/argus_socket:/tmp/argus_socket to your docker run command. For example:
+#
+echo "sudo docker run --runtime nvidia -it --rm --network host \
+    --volume ~/nvdli-data:/nvdli-nano/data \
+    --volume /tmp/argus_socket:/tmp/argus_socket \
+    --device /dev/video0 \
+    nvcr.io/nvidia/dli/dli-nano-ai:v2.0.1-r32.5.0" > docker_dli_run.sh
+#
+chmod +x docker_dli_run.sh
+#
+./docker_dli_run.sh
+#
+#---------------------------------------------------------------------------
+#
+If nor using CSI camera or USB webcam
+#
+echo "sudo docker run --runtime nvidia -it --rm --network host \
+    nvcr.io/nvidia/dli/dli-nano-ai:v2.0.1-r32.5.0" > docker_dli_run.sh
+#
+chmod +x docker_dli_run.sh
+#
+./docker_dli_run.sh
+#
+#---------------------------------------------------------------------------
+#
+Open the following link address : 192.168.55.1:8888
+Enter the password: dlinano
+#
+#---------------------------------------------------------------------------
+#
+JetPack	Release       	Container Tag       	Language
+4.4			v2.0.0-r32.4.3		en-US
+4.4.1			v2.0.1-r32.4.4		en-US
+4.4.1			v2.0.1-r32.4.4zh	zh-CN
+4.5			v2.0.1-r32.5.0		en-US
+4.5			v2.0.1-r32.5.0zh	zh-CN
+#
+#---------------------------------------------------------------------------
+# O P T I O N A L
+#
+Downloading the Container
+#
+docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+#
+sudo docker pull nvcr.io/nvidia/l4t-base:r32.4.3
+#
+#---------------------------------------------------------------------------
